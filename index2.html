@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAI 2</title>
+</head>
+<body>
+    <div>
+        <h1>Đề bài 2:</h1>
+        <p>Viết một function có tên numberOneTriangle(). Hàm có tham số truyền vào là một số nguyên trong khoảng (1-10) có tác dụng in ra hình tam giác</p>
+    </div>
+    <hr>
+    <form>
+        <h1>Nhập số nguyên trong khoảng 1-10:</h1>
+        <input type="number" id="a"><br>        
+        <input type="button" onclick="numberOneTriangle()" value="Kết quả">
+    </form>
+    <div>
+        <h1 style="color:red" id="result"></h1>
+        <script>            
+            function numberOneTriangle(){
+                let a = Number(document.getElementById("a").value);
+                if ((a >=1) && (a <= 10) && (Number.isInteger(a))){
+                    let triangle = "";                             
+                    for (let i = 1; i <= a; i++){                        
+                        for (let j = 1; j<=i; j++){
+                            triangle += "*";
+                        }
+                        triangle += "<br>";                    
+                    }
+                    document.getElementById("result").innerHTML = triangle;           
+                } else {
+                    document.getElementById("result").innerHTML = "Vui lòng nhập số nguyên từ 1-10";           
+                }
+           }
+        </script>
+    </div>
+</body>
+</html>

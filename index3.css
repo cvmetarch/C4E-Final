@@ -1,0 +1,137 @@
+body {
+margin: 0;
+padding: 100px;
+}
+
+* {box-sizing: border-box;}
+
+img {
+width: 97px;
+height: 97px;
+border-radius: (97/2)px;
+object-fit: cover;
+}
+
+.app-layout0 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 24px;
+    width: 100%;
+    height: 10%;
+    margin: 0;
+}
+
+.header{
+    height: 80%;
+}
+.search-box{
+    height: 20%;
+    width: 100%;
+    display: flex;
+}
+.search-bar{
+    float: left;
+    width: 50%;
+}
+
+.search-bar input {    
+    padding-left: 20px;
+    width: 60%;
+    height: 100%;
+    border-radius:10px ;
+    border-width: 1px;
+}
+
+.top-nav {
+    display:flex;
+    width: 50% ;
+    justify-content: space-between;
+    align-items: center;
+    height:100%;
+}
+.top-nav p{
+    padding: 15px;
+}
+
+.app-layout {  
+width: 100%;
+height: 90%;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+/*grid-gap: 2vh;*/
+margin:0;
+}
+
+.cell {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;               
+margin:1em;
+padding: 20px;
+}
+
+.images {
+    width:50%;
+    height:100%;
+}
+
+.content {
+font-family: Arial, Helvetica, sans-serif; 
+width:50%;
+height:100%;
+display: flex;
+flex-direction: column;    
+margin:1em 1em 0em 1em;
+}
+
+
+.names {
+    margin-block: 0em 1em;
+    font-weight: bold;
+    font-size: x-large;
+    }
+.places {
+    margin-block: 0em 1em;
+    font-size: small;
+    font-weight: bold;
+}
+
+.hobbies {
+    display: flex;
+    margin-block: 0em 1em;
+    color:violet;
+    font-size: small;
+    gap:5px;
+    flex-wrap:wrap;
+}
+.hobbies p{
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    margin: 0;
+}
+
+.cell:hover {
+transform: scale(1.02);
+color: violet;
+border-radius: 12px;
+border: 1px solid pink;
+}
+
+@media only screen and (max-width: 640px) {
+/* For mobile phones: */
+.app-layout{  
+grid-template-columns: 1fr;
+}
+}
+
+@media only screen and (min-width: 641px) and (max-width: 1007px){
+/* For Tablet: */
+.app-layout{  
+    grid-template-columns: 1fr 1fr;
+    }
+}
